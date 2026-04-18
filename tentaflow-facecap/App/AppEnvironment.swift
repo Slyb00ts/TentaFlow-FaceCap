@@ -10,6 +10,7 @@ import SwiftUI
 import Shared
 import Export
 import Transfer
+import PerformanceCapture
 
 /// Model trzymany w sesji — gromadzi dane zbierane w trakcie flow.
 @MainActor
@@ -51,6 +52,9 @@ public final class AppEnvironment: ObservableObject {
     public lazy var thermalObserver: ThermalStateObserver = ThermalStateObserver()
     public lazy var writer: FaceFileWriter = FaceFileWriter()
     public lazy var validator: FaceFileValidator = FaceFileValidator()
+
+    /// Biblioteka snapshotów wyrazów twarzy — faza F9.
+    @Published public var expressionLibrary: ExpressionLibrary = ExpressionLibrary()
 
     @Published public var cameraAuthorized: Bool = false
     @Published public var microphoneAuthorized: Bool = false

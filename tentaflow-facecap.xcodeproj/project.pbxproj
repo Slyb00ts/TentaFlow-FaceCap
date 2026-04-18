@@ -21,6 +21,7 @@
 		A001000C000000000000A001 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A002000C000000000000A001 /* PreviewView.swift */; };
 		A001000D000000000000A001 /* ExportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A002000D000000000000A001 /* ExportView.swift */; };
 		A001000E000000000000A001 /* TransferProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A002000E000000000000A001 /* TransferProgressView.swift */; };
+		A001001A000000000000A001 /* ExpressionCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A002001A000000000000A001 /* ExpressionCaptureView.swift */; };
 		A001000F000000000000A001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A002000F000000000000A001 /* Assets.xcassets */; };
 		A0010010000000000000A001 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A0020010000000000000A001 /* Localizable.strings */; };
 		A0010011000000000000A001 /* ARKitBlendshapeGuide.json in Resources */ = {isa = PBXBuildFile; fileRef = A0020011000000000000A001 /* ARKitBlendshapeGuide.json */; };
@@ -49,6 +50,7 @@
 		A002000C000000000000A001 /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 		A002000D000000000000A001 /* ExportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportView.swift; sourceTree = "<group>"; };
 		A002000E000000000000A001 /* TransferProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferProgressView.swift; sourceTree = "<group>"; };
+		A002001A000000000000A001 /* ExpressionCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpressionCaptureView.swift; sourceTree = "<group>"; };
 		A002000F000000000000A001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0020010000000000000A001 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		A0020011000000000000A001 /* ARKitBlendshapeGuide.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ARKitBlendshapeGuide.json; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				A0020009000000000000A001 /* NeutralFaceView.swift */,
 				A002000A000000000000A001 /* CalibrationStepView.swift */,
 				A002000B000000000000A001 /* PerformanceCaptureView.swift */,
+				A002001A000000000000A001 /* ExpressionCaptureView.swift */,
 				A002000C000000000000A001 /* PreviewView.swift */,
 				A002000D000000000000A001 /* ExportView.swift */,
 				A002000E000000000000A001 /* TransferProgressView.swift */,
@@ -269,6 +272,7 @@
 				A0010009000000000000A001 /* NeutralFaceView.swift in Sources */,
 				A001000A000000000000A001 /* CalibrationStepView.swift in Sources */,
 				A001000B000000000000A001 /* PerformanceCaptureView.swift in Sources */,
+				A001001A000000000000A001 /* ExpressionCaptureView.swift in Sources */,
 				A001000C000000000000A001 /* PreviewView.swift in Sources */,
 				A001000D000000000000A001 /* ExportView.swift in Sources */,
 				A001000E000000000000A001 /* TransferProgressView.swift in Sources */,

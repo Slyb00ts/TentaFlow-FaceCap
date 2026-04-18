@@ -49,6 +49,8 @@ public enum SectionID: UInt32, CaseIterable {
     case teethRow           = 0x0042
     case tongue             = 0x0043
     case mouthCavity        = 0x0044
+
+    case expressionSnapshots = 0x0050
 }
 
 /// Flagi zapisywane w nagłówku pliku.
@@ -63,6 +65,7 @@ public struct FaceFlags: OptionSet, Sendable {
     public static let hasTeeth         = FaceFlags(rawValue: 1 << 4)
     public static let hasTongue        = FaceFlags(rawValue: 1 << 5)
     public static let hasMouthCavity   = FaceFlags(rawValue: 1 << 6)
+    public static let hasExpressions   = FaceFlags(rawValue: 1 << 7)
 }
 
 /// Flagi pojedynczego wpisu blendshape.

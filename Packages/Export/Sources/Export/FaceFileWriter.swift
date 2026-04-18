@@ -101,6 +101,13 @@ public struct FaceFileWriter {
             flags.insert(.hasMouthCavity)
         }
 
+        // Snapshoty wyrazów twarzy (faza F9). Sekcja 0x0050 jest po rigid pieces,
+        // co utrzymuje rosnącą kolejność section ID w dyrektorium.
+        if let snapshots = asset.expressionSnapshots, !snapshots.isEmpty {
+            sections.append((.expressionSnapshots, SectionBuilder.buildExpressionSnapshots(snapshots)))
+            flags.insert(.hasExpressions)
+        }
+
         if asset.lidarUsed { flags.insert(.hasLiDAR) }
 
         // 2. Liczymy offsety sekcji (32B-aligned). Layout:

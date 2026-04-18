@@ -129,6 +129,48 @@ public struct Tongue: Equatable {
     }
 }
 
+/// Pojedynczy wpis snapshotu wyrazu twarzy. Każdy snapshot zapisujemy jako
+/// nazwę (max 24 bajty ASCII) + wektor 52 wag skwantyzowanych do `UInt8`.
+public struct ExpressionSnapshotEntry: Equatable, Sendable {
+
+    /// Nazwa snapshotu w pliku `.face` — max 24 bajty ASCII.
+    public let name: String
+
+    /// Skwantyzowane wagi AU (0..255). Ilość = 52.
+    public let weights: [UInt8]
+
+    /// Znormalizowany wskaźnik pewności (0..255).
+    public let qualityScore: UInt8
+
+    /// Główny inicjator skwantyzujący wartości Float `[0, 1]` do `UInt8`.
+    public init(name: String, weights: [Float], qualityScore: Float = 1.0) {
+        // Nazwa — prefix do 24 bajtów UTF-8 (ASCII safe path).
+        let trimmedBytes = Array(name.utf8.prefix(24))
+        self.name = String(decoding: trimmedBytes, as: UTF8.self)
+        // Wagi — dokładnie 52, skwantyzowane do UInt8.
+        var out = [UInt8](repeating: 0, count: 52)
+        let src = weights.prefix(52)
+        for (i, value) in src.enumerated() {
+            let clamped = min(max(value, 0), 1)
+            out[i] = UInt8((clamped * 255.0).rounded())
+        }
+        self.weights = out
+        let q = min(max(qualityScore, 0), 1)
+        self.qualityScore = UInt8((q * 255.0).rounded())
+    }
+
+    /// Inicjator z surowymi bajtami — używany w testach i readerze.
+    public init(rawName: String, rawWeights: [UInt8], rawQualityScore: UInt8) {
+        self.name = rawName
+        var padded = Array(rawWeights.prefix(52))
+        if padded.count < 52 {
+            padded.append(contentsOf: [UInt8](repeating: 0, count: 52 - padded.count))
+        }
+        self.weights = padded
+        self.qualityScore = rawQualityScore
+    }
+}
+
 /// Opis jamy ustnej (ciemnoróżowa powierzchnia wewnątrz).
 public struct MouthCavity: Equatable {
     public let vertices: [Vec3]
@@ -165,6 +207,9 @@ public struct FaceAssetData {
     // Performance clips.
     public let performanceClips: [PerformanceClip]
 
+    // Snapshoty wyrazów twarzy (faza F9 — Expression Snapshots).
+    public let expressionSnapshots: [ExpressionSnapshotEntry]?
+
     // Rigid pieces.
     public let eyes: EyeSpheres?
     public let teeth: TeethRow?
@@ -185,6 +230,7 @@ public struct FaceAssetData {
                 textureImage: CGImage?,
                 blendshapes: [BlendshapeEntry],
                 performanceClips: [PerformanceClip] = [],
+                expressionSnapshots: [ExpressionSnapshotEntry]? = nil,
                 eyes: EyeSpheres? = nil,
                 teeth: TeethRow? = nil,
                 tongue: Tongue? = nil,
@@ -201,6 +247,7 @@ public struct FaceAssetData {
         self.textureImage = textureImage
         self.blendshapes = blendshapes
         self.performanceClips = performanceClips
+        self.expressionSnapshots = expressionSnapshots
         self.eyes = eyes
         self.teeth = teeth
         self.tongue = tongue

@@ -8,6 +8,7 @@ import simd
 import Shared
 import Export
 import AssetInjection
+import PerformanceCapture
 
 struct ExportView: View {
 
@@ -42,6 +43,8 @@ struct ExportView: View {
                                    value: "\(environment.session.acceptedAU.count) / 52")
                     LabeledContent(NSLocalizedString("export.sum.clips", comment: ""),
                                    value: "\(environment.session.performanceClips.count)")
+                    LabeledContent(NSLocalizedString("export.sum.expressions", comment: ""),
+                                   value: "\(environment.expressionLibrary.snapshots.count) / \(ExpressionPreset.allCases.count)")
                     LabeledContent(NSLocalizedString("export.sum.size", comment: ""),
                                    value: estimatedSize)
                 }
@@ -155,6 +158,17 @@ struct ExportView: View {
             texture: session.scannedTexture
         )
 
+        // Snapshoty wyrazów twarzy (faza F9) — konwertujemy na skwantyzowane wpisy 80 B.
+        let snapshotEntries: [ExpressionSnapshotEntry] = environment.expressionLibrary
+            .exportAsArray()
+            .map { snap in
+                ExpressionSnapshotEntry(
+                    name: snap.name,
+                    weights: snap.weights,
+                    qualityScore: snap.qualityScore
+                )
+            }
+
         return FaceAssetData(
             profileName: session.profileName,
             vertices: session.scannedMeshVertices,
@@ -166,6 +180,7 @@ struct ExportView: View {
             textureImage: session.scannedTexture,
             blendshapes: entries,
             performanceClips: session.performanceClips,
+            expressionSnapshots: snapshotEntries.isEmpty ? nil : snapshotEntries,
             eyes: rigid.eyes,
             teeth: rigid.teeth,
             tongue: rigid.tongue,

@@ -221,6 +221,36 @@ public enum SectionBuilder {
         return w.data
     }
 
+    // MARK: — 0x0050 EXPRESSION_SNAPSHOTS
+
+    /// Buduje sekcję `EXPRESSION_SNAPSHOTS`. Każdy wpis ma stałą szerokość 80 B:
+    ///   `0..24`   — nazwa (ASCII null-padded)
+    ///   `24..76`  — 52 wagi skwantyzowane do UInt8
+    ///   `76`      — quality score (UInt8)
+    ///   `77..80`  — padding do 80 B
+    public static func buildExpressionSnapshots(_ snapshots: [ExpressionSnapshotEntry]) -> Data {
+        let w = ByteWriter(reserving: 16 + snapshots.count * 80 + 32)
+        w.writeU32(UInt32(snapshots.count))
+        w.writeZeros(12)
+        for snap in snapshots {
+            let nameBytes = Array(snap.name.utf8.prefix(24))
+            let paddedName = nameBytes + [UInt8](repeating: 0, count: 24 - nameBytes.count)
+            w.writeBytes(paddedName)               // 24 B
+
+            // Dokładnie 52 wag — jeśli `weights` ma inny rozmiar, przycinamy / dopinamy zerami.
+            var weightBytes = Array(snap.weights.prefix(52))
+            if weightBytes.count < 52 {
+                weightBytes.append(contentsOf: [UInt8](repeating: 0, count: 52 - weightBytes.count))
+            }
+            w.writeBytes(weightBytes)              // 52 B
+
+            w.writeU8(snap.qualityScore)           // 1 B
+            w.writeZeros(3)                        // 3 B pad → entry = 80 B
+        }
+        w.padPad32()
+        return w.data
+    }
+
     // MARK: — 0x0041 EYE_SPHERES
 
     public static func buildEyeSpheres(_ eyes: EyeSpheres) -> Data {

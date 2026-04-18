@@ -18,6 +18,7 @@ public enum AppStep: Equatable, Codable, Hashable, Sendable {
     case neutralFace
     case calibrationStep(index: Int)
     case performanceCapture
+    case expressionCapture
     case preview
     case export
     case transfer
@@ -38,6 +39,7 @@ public enum AppStep: Equatable, Codable, Hashable, Sendable {
         }
         steps.append(contentsOf: [
             .performanceCapture,
+            .expressionCapture,
             .preview,
             .export,
             .transfer,

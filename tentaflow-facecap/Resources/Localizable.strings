@@ -78,6 +78,25 @@
 "perf.frames.count" = "klatek: %d";
 "perf.continue" = "Kontynuuj";
 
+"expr.title" = "Wyrazy twarzy";
+"expr.progress.counter" = "%d / %d";
+"expr.record" = "Nagraj";
+"expr.save" = "Zapisz";
+"expr.retry" = "Powtórz";
+"expr.remove" = "Usuń";
+"expr.skip" = "Pomiń";
+"expr.next" = "Dalej";
+"expr.capturing" = "Rejestruję…";
+"expr.quality" = "Jakość snapshotu";
+"expr.frames" = "Klatki zebrane: %d";
+"expr.expected.aus" = "Oczekiwane AU";
+"expr.difficulty" = "Trudność: %d / 5";
+"expr.badge.required" = "Wymagany";
+"expr.stored.quality" = "Zapisane (jakość %.0f%%)";
+"expr.error.title" = "Błąd snapshotu";
+"expr.error.ar" = "ARKit nie działa — sprawdź zgodę na kamerę.";
+"export.sum.expressions" = "Snapshoty mimiki";
+
 "preview.title" = "Podgląd i eksport";
 "preview.preset" = "Preset emocji";
 "preset.neutral" = "Neutralna";

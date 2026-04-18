@@ -63,6 +63,8 @@ struct RootView: View {
             CalibrationStepView(auIndex: index)
         case .performanceCapture:
             PerformanceCaptureView()
+        case .expressionCapture:
+            ExpressionCaptureView()
         case .preview:
             PreviewView()
         case .export:

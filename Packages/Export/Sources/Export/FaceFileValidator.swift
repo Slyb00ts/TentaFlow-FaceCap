@@ -130,11 +130,23 @@ public struct FaceFileValidator {
             if asset.teeth != nil { f.insert(.hasTeeth) }
             if asset.tongue != nil { f.insert(.hasTongue) }
             if asset.mouthCavity != nil { f.insert(.hasMouthCavity) }
+            if let snaps = asset.expressionSnapshots, !snaps.isEmpty { f.insert(.hasExpressions) }
             if asset.lidarUsed { f.insert(.hasLiDAR) }
             return f
         }()
         guard flags.rawValue == expectedFlags.rawValue else {
             throw FacecapError.validatorMismatch(section: 0, field: "flags")
+        }
+
+        // Liczba snapshotów — jeżeli asset je dostarczył, sprawdź nagłówek sekcji.
+        if let snaps = asset.expressionSnapshots, !snaps.isEmpty {
+            guard let snapSection = map[SectionID.expressionSnapshots.rawValue] else {
+                throw FacecapError.validatorMismatch(section: SectionID.expressionSnapshots.rawValue, field: "missing")
+            }
+            let snapCount = readU32(data, at: Int(snapSection.off))
+            guard Int(snapCount) == snaps.count else {
+                throw FacecapError.validatorMismatch(section: SectionID.expressionSnapshots.rawValue, field: "snapshot_count")
+            }
         }
     }
 
