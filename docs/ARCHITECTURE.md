@@ -290,4 +290,4 @@ w runtime tentaflow-buddy:
 - **`IdleAnimator`** — losowe micro-saccades + oddech (breath cycle). Po stronie iOS
   istnieje implementacja referencyjna w `Preview/IdleAnimator.swift`.
 
-Patrz [`/home/critix/repos/rust/rack-eye/docs/head7_integration.md`](../../../rust/rack-eye/docs/head7_integration.md).
+Patrz [`/home/critix/repos/rust/tentaflow-buddy/docs/head7_integration.md`](../../../rust/tentaflow-buddy/docs/head7_integration.md).

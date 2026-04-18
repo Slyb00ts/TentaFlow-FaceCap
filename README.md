@@ -127,7 +127,7 @@ the complete data-flow diagram.
 | [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | Data flow, Swift modules, runtime dependencies, Rust side |
 | [`docs/FORMAT_SPEC.md`](docs/FORMAT_SPEC.md) | **Canonical** binary `.face v3` specification — byte-by-byte layout |
 
-On the tentaflow-buddy side: [`rack-eye/docs/head7_integration.md`](../../rust/rack-eye/docs/head7_integration.md).
+On the tentaflow-buddy side: [`tentaflow-buddy/docs/head7_integration.md`](../../rust/tentaflow-buddy/docs/head7_integration.md).
 
 ---
 

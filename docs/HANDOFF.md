@@ -49,10 +49,10 @@ odpowiadał za dedykowany pakiet SPM lub zestaw ekranów.
 
 | Moduł | Ścieżka |
 |---|---|
-| Parser zero-copy | `rack-eye/src/board/face/face_v3_loader.rs` |
-| Typy binarne | `rack-eye/src/board/face/face_v3_types.rs` |
-| Adapter head7 | `rack-eye/src/board/face/head7_user.rs` |
-| Placeholder | `rack-eye/assets/faces/user.face` (pusty) |
+| Parser zero-copy | `tentaflow-buddy/src/board/face/face_v3_loader.rs` |
+| Typy binarne | `tentaflow-buddy/src/board/face/face_v3_types.rs` |
+| Adapter head7 | `tentaflow-buddy/src/board/face/head7_user.rs` |
+| Placeholder | `tentaflow-buddy/assets/faces/user.face` (pusty) |
 
 ---
 
@@ -190,11 +190,11 @@ Opisane w pkt **2.3** wyżej. Bez tego aplikacja nie zbudować się nie zbuduje.
 
 ### 3.3. `assets/faces/user.face` — pusty placeholder
 
-Plik `/home/critix/repos/rust/rack-eye/assets/faces/user.face` **istnieje** (wymagane
+Plik `/home/critix/repos/rust/tentaflow-buddy/assets/faces/user.face` **istnieje** (wymagane
 przez `include_bytes!` w `head7_user.rs:19`), ale jest pusty (0 bajtów). Parser
 `FaceV3Ref::from_bytes` wykryje `FaceV3Error::TooShort` i `head7_user::load_user_face`
 spadnie na **placeholder mode** — ośmiościan (zobacz
-`rack-eye/docs/head7_integration.md`).
+`tentaflow-buddy/docs/head7_integration.md`).
 
 **Żeby użyć prawdziwej twarzy:** wygeneruj `.face` z aplikacji iOS i skopiuj pod
 tę ścieżkę **przed** `cargo build` (patrz pkt 4 poniżej).
@@ -251,8 +251,8 @@ Zakłada, że punkty 2.1–2.4 zostały już wykonane (projekt się buduje).
 14. Na Macu:
     ```bash
     cp ~/Downloads/<profile>.face \
-       ~/repos/rust/rack-eye/assets/faces/user.face
-    cd ~/repos/rust/rack-eye
+       ~/repos/rust/tentaflow-buddy/assets/faces/user.face
+    cd ~/repos/rust/tentaflow-buddy
     cargo clean           # bo include_bytes! jest kompilowany na stałe
     cargo build --release
     # Jeśli to pierwszy build po cargo clean, uruchom:
