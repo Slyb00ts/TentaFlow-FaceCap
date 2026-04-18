@@ -8,11 +8,11 @@ import Network
 import Shared
 
 /// Uploader przez sieć lokalną. Znajduje urządzenie Rack-Eye (Bonjour
-/// `_rackeye._tcp.local.`), po czym wysyła plik `.face` multipartem.
+/// `_tentaflow._tcp.local.`), po czym wysyła plik `.face` multipartem.
 public final class WiFiUploader: NSObject {
 
     /// Typ serwisu Bonjour rozgłaszanego przez Tab5.
-    public static let bonjourType: String = "_rackeye._tcp."
+    public static let bonjourType: String = "_tentaflow._tcp."
 
     /// Endpoint HTTP na urządzeniu docelowym do odbioru pliku `.face`.
     public static let uploadPath: String = "/api/v1/face/upload"

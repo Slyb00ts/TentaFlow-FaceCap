@@ -4,7 +4,7 @@ Native iOS app (Swift 5.10, SwiftUI, iOS 17+) for scanning the user's head,
 calibrating 52 ARKit blendshapes, injecting rigid assets (eye spheres, teeth,
 tongue, mouth cavity), recording performance clips, capturing 20 authentic
 facial expression snapshots, and exporting a face profile in the binary
-`.face v3` format to the **ESP32-P4 M5Stack Tab5** device of the **rack-eye**
+`.face v3` format to the **ESP32-P4 M5Stack Tab5** device of the **tentaflow-buddy**
 project.
 
 **Repository:** `git@github.com:Slyb00ts/TentaFlow-FaceCap.git`
@@ -71,7 +71,7 @@ Onboarding → Head Scan → Face Calibration (52 AU) → Performance Capture
    (little-endian, 32-byte cache-line aligned, CRC32-IEEE checksummed).
 
 7. **Transfer** — AirDrop / Files app / Bonjour-discovered WiFi upload
-   (`_rackeye._tcp.local`) to the Tab5 device.
+   (`_tentaflow._tcp.local`) to the Tab5 device.
 
 ---
 
@@ -127,7 +127,7 @@ the complete data-flow diagram.
 | [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | Data flow, Swift modules, runtime dependencies, Rust side |
 | [`docs/FORMAT_SPEC.md`](docs/FORMAT_SPEC.md) | **Canonical** binary `.face v3` specification — byte-by-byte layout |
 
-On the rack-eye side: [`rack-eye/docs/head7_integration.md`](../../rust/rack-eye/docs/head7_integration.md).
+On the tentaflow-buddy side: [`rack-eye/docs/head7_integration.md`](../../rust/rack-eye/docs/head7_integration.md).
 
 ---
 

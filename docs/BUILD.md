@@ -154,7 +154,7 @@ Wszystkie teksty są **po polsku** (CFBundleDevelopmentRegion = `pl`):
 | `NSMicrophoneUsageDescription` | Audio w klipach performance |
 | `NSPhotoLibraryAddUsageDescription` | Zapis teksur/klatek do biblioteki |
 | `NSLocalNetworkUsageDescription` | Bonjour/Wi-Fi transfer do Tab5 |
-| `NSBonjourServices` | `_rackeye._tcp.` |
+| `NSBonjourServices` | `_tentaflow._tcp.` |
 
 ### Entitlements
 
@@ -168,7 +168,7 @@ Plik `tentaflow-facecap.entitlements`:
 <array>
   <dict>
     <key>UTTypeIdentifier</key>
-    <string>com.rackeye.face</string>
+    <string>pl.tentaflow.face</string>
     <key>UTTypeDescription</key>
     <string>TentaFlow Face Profile</string>
     <key>UTTypeTagSpecification</key>
@@ -176,7 +176,7 @@ Plik `tentaflow-facecap.entitlements`:
       <key>public.filename-extension</key>
       <array><string>face</string></array>
       <key>public.mime-type</key>
-      <array><string>application/x-rackeye-face</string></array>
+      <array><string>application/x-tentaflow-face</string></array>
     </dict>
   </dict>
 </array>
@@ -212,7 +212,7 @@ Dzięki temu `.face` pokazuje się jako *TentaFlow Face Profile* w *Files* i Sha
 ### Automatic signing
 
 `project.pbxproj` ma `CODE_SIGN_STYLE = Automatic`. Xcode sam tworzy profil
-*iOS Team Provisioning Profile: com.rackeye.tentaflow-facecap* przy pierwszym
+*iOS Team Provisioning Profile: pl.tentaflow.facecap* przy pierwszym
 buildzie. Nie ingeruj ręcznie w profile.
 
 ---
@@ -291,4 +291,4 @@ Do pełnego release'u dodaj Fastlane `match` i secret'y.
 | `ARFaceTrackingConfiguration is not supported` | Symulator / iPhone bez TrueDepth | Zmień target na fizyczny iPhone X+ |
 | `Provisioning profile does not match bundle identifier` | Stary cache signing | W Signing & Capabilities: od-zaznacz i zaznacz ponownie *Automatically manage signing* |
 | Build działa, ale `.face` ma CRC mismatch na Tab5 | Niezgodność layout 32/36 B blendshape | Patrz [HANDOFF §3.1](HANDOFF.md#31-krytyczne-rozmiar-wpisu-blendshape_table--36-b-vs-32-b) |
-| `Library 'stdc++' not found` | Mylisz z projektem rack-eye — to Rust build, nie Xcode | Sprawdź katalog roboczy |
+| `Library 'stdc++' not found` | Mylisz z projektem tentaflow-buddy — to Rust build, nie Xcode | Sprawdź katalog roboczy |

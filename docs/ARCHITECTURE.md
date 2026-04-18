@@ -1,7 +1,7 @@
 # ARCHITECTURE — tentaflow-facecap
 
 Przegląd architektury aplikacji iOS i jej integracji z urządzeniem Tab5
-(projekt rack-eye).
+(projekt tentaflow-buddy).
 
 ---
 
@@ -84,11 +84,11 @@ Przegląd architektury aplikacji iOS i jej integracji z urządzeniem Tab5
                              Documents/Faces/<profile>.face                   
                                     │                                        
                                     ▼                                        
- [Transfer] ── AirDrop / Files.app / Wi-Fi Bonjour _rackeye._tcp.             
+ [Transfer] ── AirDrop / Files.app / Wi-Fi Bonjour _tentaflow._tcp.             
                                                                             
 ═══════════════════════════════════════════════════════════════════════════════
                                                                             
-                rack-eye (ESP32-P4 Tab5, Rust no_std-ish)                    
+                tentaflow-buddy (ESP32-P4 Tab5, Rust no_std-ish)             
                 --------------------------------------------------------------
                                                                             
  assets/faces/user.face  (include_bytes! w build time, albo microSD mmap)    
@@ -130,7 +130,7 @@ Aplikacja jest podzielona na 8 lokalnych pakietów SPM + target aplikacji.
 | **PerformanceCapture** | Nagrywanie do 5 klipów × 60 s — 52 AU weights 30 Hz + audio 16 kHz PCM16. Biblioteka klipów z quantyzacją |
 | **Preview** | Podgląd Metal — mesh + rig + texture + blendshapes. Live driver z ARKit, emotion presets, viseme overlay, idle animator |
 | **Export** | Zapis pliku `.face v3` — cały writer z SectionBuilder, CRC32, CIImage → RGB565, sparse delta encoder, walidator |
-| **Transfer** | Wysyłka pliku — AirDrop, Files.app, Wi-Fi Bonjour (`_rackeye._tcp.`). Progres transferu jako Combine publisher |
+| **Transfer** | Wysyłka pliku — AirDrop, Files.app, Wi-Fi Bonjour (`_tentaflow._tcp.`). Progres transferu jako Combine publisher |
 
 ### Target aplikacji
 
@@ -165,7 +165,7 @@ Aplikacja używa **wyłącznie** frameworków Apple — brak zewnętrznych depen
 
 ---
 
-## 4. Strona rack-eye (Rust)
+## 4. Strona tentaflow-buddy (Rust)
 
 ### 4.1. Parser — `face_v3_loader.rs`
 
@@ -197,7 +197,7 @@ FaceV3Ref::from_bytes(&buf)
 
 ### 4.2. Adapter — `head7_user.rs`
 
-Konwertuje `FaceV3Ref` na struktury wewnętrzne rendera rack-eye:
+Konwertuje `FaceV3Ref` na struktury wewnętrzne rendera tentaflow-buddy:
 
 ```
 FaceV3Ref  ─► head7_user::load_user_face  ─► Head7Data {
@@ -230,7 +230,7 @@ Jeśli `assets/faces/user.face` jest pusty lub uszkodzony:
 - `head7_user::load_user_face` spada na **ośmiościan** (8 wierzchołków, 12 krawędzi),
 - Logger emituje WARN, aplikacja nadal działa.
 
-Placeholder umożliwia development rack-eye bez konieczności generowania prawdziwego
+Placeholder umożliwia development tentaflow-buddy bez konieczności generowania prawdziwego
 pliku `.face`.
 
 ---
@@ -256,7 +256,7 @@ Każdy frame na Tab5 renderuje nawet 5 różnych geometrii. Poprawna kolejność
 - eye_sockets to geometria face_skin wokół oczu, z góry zasłania część sfery
   (powieki), ale sfera wystaje do przodu — renderuje się sferę **przed** skórą.
 
-Rasterizer rack-eye używa painter's algorithm z sortowaniem per-triangle (nie
+Rasterizer tentaflow-buddy używa painter's algorithm z sortowaniem per-triangle (nie
 Z-buffer), więc kolejność meshów jest wymagana przez samą architekturę rendera.
 
 ---
@@ -275,10 +275,10 @@ Z-buffer), więc kolejność meshów jest wymagana przez samą architekturę ren
 
 ---
 
-## 7. Future work (w rack-eye, zgodne z ADR)
+## 7. Future work (w tentaflow-buddy, zgodne z ADR)
 
 Elementy przygotowane po stronie iOS, które **jeszcze nie są** zaimplementowane
-w runtime rack-eye:
+w runtime tentaflow-buddy:
 
 - **`Mimicry52`** — runtime blendshape applier (analogicznie do `Mimicry` dla Head5).
   Parser ma już delty, brakuje mikserki na poziomie rendera.

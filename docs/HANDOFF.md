@@ -25,8 +25,8 @@ odpowiadał za dedykowany pakiet SPM lub zestaw ekranów.
 | Views | `tentaflow-facecap/Views/*.swift` | `OnboardingView`, `HeadScanBriefView`, `HeadScanCaptureView`, `CalibrationBriefView`, `NeutralFaceView`, `CalibrationStepView`, `PerformanceCaptureView`, `ExportView`, `TransferProgressView` |
 | **Shared** | `Packages/Shared/` | `AppLog`, `DeviceCapabilities`, `FacecapError`, `LoadingOverlay`, math (`SIMDExtensions`, `LinearAlgebra`, `QuadraticSolver`) |
 | **Export** | `Packages/Export/` | `FaceFileWriter`, `SectionBuilder`, `ByteWriter`, `CRC32`, `TextureConverter`, `SparseDeltaEncoder`, `PerformanceQuantizer`, `FaceFileValidator`, `FaceAssetData`, `FaceFileFormat` |
-| **Transfer** | `Packages/Transfer/` | `AirDropExporter`, `FilesAppExporter`, `WiFiUploader` (Bonjour `_rackeye._tcp.`), `ShareSheetController`, `TransferProgress` |
-| Info.plist | `tentaflow-facecap/Info.plist` | 4 usage descriptions PL + UTI `com.rackeye.face` |
+| **Transfer** | `Packages/Transfer/` | `AirDropExporter`, `FilesAppExporter`, `WiFiUploader` (Bonjour `_tentaflow._tcp.`), `ShareSheetController`, `TransferProgress` |
+| Info.plist | `tentaflow-facecap/Info.plist` | 4 usage descriptions PL + UTI `pl.tentaflow.face` |
 | Entitlements | `tentaflow-facecap/tentaflow-facecap.entitlements` | Local network client |
 | Resources | `tentaflow-facecap/Resources/` | `Localizable.strings` (PL), `ARKitBlendshapeGuide.json`, `Assets.xcassets` (AppIcon/AccentColor) |
 
@@ -45,7 +45,7 @@ odpowiadał za dedykowany pakiet SPM lub zestaw ekranów.
 | **PerformanceCapture** | `Packages/PerformanceCapture/` | `PerformanceRecorder` (timeline 52 AU), `PerformancePlayer`, `AudioRecorder` (AVFoundation), `AudioResampler` (→ 16 kHz PCM16), `PerformanceQuantizer` (u8 0..255), `PerformanceClip`, `ClipLibrary`, `PerformanceCaptureError` |
 | **Preview** | `Packages/Preview/` | `FacePreviewView`, `FacePreviewRenderer` (Metal), `PreviewShaders.metal`, `PreviewMeshBuilder`, `RigSkinner`, `LiveFaceDriver`, `EmotionBlender`, `EmotionPreset`, `VisemeOverlay`, `IdleAnimator`, `PreviewError` |
 
-### Agent #4 — Rust loader (rack-eye, ~1200 linii)
+### Agent #4 — Rust loader (tentaflow-buddy, ~1200 linii)
 
 | Moduł | Ścieżka |
 |---|---|
@@ -141,7 +141,7 @@ Info.plist ma **polskie** teksty w usage descriptions:
 - `NSMicrophoneUsageDescription` — audio do klipów performance
 - `NSPhotoLibraryAddUsageDescription` — zapis tekstur do biblioteki
 - `NSLocalNetworkUsageDescription` — Bonjour/Wi-Fi transfer
-- `NSBonjourServices = [_rackeye._tcp.]`
+- `NSBonjourServices = [_tentaflow._tcp.]`
 
 Jeśli zmieniasz `CFBundleDevelopmentRegion` z `pl` na `en`, odpowiednio zaktualizuj
 `Resources/Localizable.strings`.
@@ -209,7 +209,7 @@ Opisane w pkt **2.4**. Error widoczny dopiero po podpięciu pakietów SPM.
 
 Zakłada, że punkty 2.1–2.4 zostały już wykonane (projekt się buduje).
 
-**Pipeline:** iPhone → apka → plik `.face` → scp/AirDrop → rack-eye →
+**Pipeline:** iPhone → apka → plik `.face` → scp/AirDrop → tentaflow-buddy →
 `cargo build` → flash → Tab5.
 
 ### Krok 1. Skan głowy
@@ -247,7 +247,7 @@ Zakłada, że punkty 2.1–2.4 zostały już wykonane (projekt się buduje).
     - **AirDrop** → Mac (jeśli Mac jest na tym samym Wi-Fi), albo
     - **Files** → *On My iPhone → tentaflow-facecap → Faces*, potem scp.
 
-### Krok 8. Wdrożenie na rack-eye (Tab5)
+### Krok 8. Wdrożenie na tentaflow-buddy (Tab5)
 14. Na Macu:
     ```bash
     cp ~/Downloads/<profile>.face \
@@ -259,7 +259,7 @@ Zakłada, że punkty 2.1–2.4 zostały już wykonane (projekt się buduje).
     ./scripts/patch-esp-dl.sh
     cargo build --release
     ```
-15. Flash na Tab5 (instrukcja w głównym `rack-eye/CLAUDE.md`).
+15. Flash na Tab5 (instrukcja w głównym `tentaflow-buddy` `CLAUDE.md`).
 16. Zmień `HeadKind` w runtime na `Head7` (jeśli jeszcze nie default).
 
 ---
@@ -334,10 +334,10 @@ Akceptujemy ograniczoną paletę emocji.
 
 - [ ] Pkt 2.1–2.4 wykonane, projekt się buduje bez erorrów na Xcode 15.4+
 - [ ] Pkt 3.1 — decyzja: 32 B (keep) albo 36 B (migrate) + aktualizacja `FORMAT_SPEC.md`
-- [ ] Pkt 4 — pełen pipeline iPhone → `.face` → rack-eye → flash → Tab5 przeszedł
+- [ ] Pkt 4 — pełen pipeline iPhone → `.face` → tentaflow-buddy → flash → Tab5 przeszedł
 - [ ] `FaceFileValidator.validate()` po stronie iOS zwraca OK
 - [ ] `FaceV3Ref::from_bytes` po stronie Rust zwraca OK (`cargo test` w face/)
 - [ ] CRC32 pliku policzone przez Swift == CRC32 pliku policzone przez Rust
 - [ ] Na LCD Tab5 widoczna jest twarz użytkownika (nie ośmiościan-placeholder)
-- [ ] Testy jednostkowe Rust `cargo test -p rack-eye face::` — zielone
+- [ ] Testy jednostkowe Rust `cargo test -p tentaflow-buddy face::` — zielone
 - [ ] Jakość skanu — ScanQualityAnalyzer zgłasza `.good` albo `.acceptable`

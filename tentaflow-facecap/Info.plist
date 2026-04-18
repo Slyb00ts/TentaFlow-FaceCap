@@ -32,7 +32,7 @@
 	<string>Aplikacja łączy się z urządzeniem Rack-Eye w sieci lokalnej (Bonjour), aby przesłać profil twarzy.</string>
 	<key>NSBonjourServices</key>
 	<array>
-		<string>_rackeye._tcp.</string>
+		<string>_tentaflow._tcp.</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
@@ -68,7 +68,7 @@
 			<key>UTTypeDescription</key>
 			<string>TentaFlow Face Profile</string>
 			<key>UTTypeIdentifier</key>
-			<string>com.rackeye.face</string>
+			<string>pl.tentaflow.face</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>
@@ -77,7 +77,7 @@
 				</array>
 				<key>public.mime-type</key>
 				<array>
-					<string>application/x-rackeye-face</string>
+					<string>application/x-tentaflow-face</string>
 				</array>
 			</dict>
 		</dict>
