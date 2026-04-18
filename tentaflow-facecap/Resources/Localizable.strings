@@ -1,0 +1,117 @@
+/* =============================================================================
+   Plik: Localizable.strings
+   Opis: Wszystkie stringi UI aplikacji TentaFlow FaceCap (po polsku).
+   ============================================================================= */
+
+"common.back" = "Wstecz";
+"common.pause" = "Pauza";
+
+"alert.openSettings" = "Otwórz Ustawienia";
+"alert.unsupported.title" = "Urządzenie nieobsługiwane";
+"alert.unsupported.msg" = "Ta aplikacja wymaga iPhone’a z kamerą TrueDepth (iPhone X lub nowszy).";
+"alert.permissions.title" = "Brak zgody";
+"alert.permissions.msg" = "Bez dostępu do kamery i mikrofonu aplikacja nie może działać. Otwórz Ustawienia i włącz uprawnienia.";
+
+"onboarding.title" = "TentaFlow FaceCap";
+"onboarding.subtitle" = "Zeskanuj twarz, skalibruj 52 wyrazy i wyślij profil na swoje urządzenie Rack-Eye.";
+"onboarding.point1" = "Skan głowy w 3D (Object Capture z RealityKit).";
+"onboarding.point2" = "Prowadzona kalibracja 52 jednostek mimicznych.";
+"onboarding.point3" = "Eksport do pliku .face v3 i transfer przez AirDrop lub Wi-Fi.";
+"onboarding.cta" = "Zaczynamy";
+"onboarding.privacy" = "Dane pozostają na Twoim urządzeniu. Wysyłka odbywa się wyłącznie po Twoim potwierdzeniu.";
+
+"scan.brief.title" = "Przygotowanie do skanu";
+"scan.req.light" = "Równomierne, jasne światło z przodu (bez silnych cieni).";
+"scan.req.neutral" = "Neutralna mina — rozluźnione policzki i usta.";
+"scan.req.hair" = "Odsłoń czoło i uszy — zbierz włosy do tyłu.";
+"scan.req.glasses" = "Zdejmij okulary i biżuterię.";
+"scan.req.distance" = "Trzymaj telefon ~30 cm od twarzy.";
+"scan.brief.cta" = "Rozpocznij skanowanie";
+
+"scan.prompt.front" = "Patrz prosto w aparat";
+"scan.prompt.left" = "Powoli obróć głowę w lewo";
+"scan.prompt.right" = "Powoli obróć głowę w prawo";
+"scan.prompt.up" = "Unieś głowę do góry";
+"scan.prompt.down" = "Opuść głowę w dół";
+
+"scan.preview.title" = "Podgląd skanu";
+"scan.preview.verts" = "Wierzchołki: %d";
+"scan.preview.tris" = "Trójkąty: %d";
+"scan.preview.coverage" = "Pokrycie: %d%%";
+"scan.preview.retry" = "Powtórz";
+"scan.preview.accept" = "Akceptuj";
+
+"calib.brief.title" = "Kalibracja mimiki";
+"calib.brief.intro" = "Przejdziemy przez 52 ruchy mimiczne. Po każdym klikniesz „Akceptuj”, „Pomiń” lub „Powtórz”.";
+"calib.brief.count.title" = "Ile ruchów?";
+"calib.brief.count.desc" = "Dokładnie 52 jednostki akcji (AU) zgodne z ARKit.";
+"calib.brief.time.title" = "Ile czasu?";
+"calib.brief.time.desc" = "Około 8–12 minut. Co 13 AU zrobimy krótką pauzę.";
+"calib.brief.quality.title" = "Jakość";
+"calib.brief.quality.desc" = "Staraj się przekroczyć wskazany próg – im wyraźniej, tym lepszy wynik.";
+"calib.brief.neutral.title" = "Neutralna mina";
+"calib.brief.neutral.desc" = "Najpierw ustabilizuj twarz na 3 sekundy – to nasz punkt odniesienia.";
+"calib.brief.hint" = "Wskazówka: wykonuj ruchy pojedynczo, staraj się izolować każdy z nich.";
+"calib.brief.cta" = "Dalej";
+
+"neutral.title" = "Neutralna twarz";
+"neutral.desc" = "Rozluźnij mięśnie twarzy i patrz prosto przez 3 sekundy.";
+"neutral.max" = "Maksymalna aktywacja AU";
+"neutral.hint" = "Jeśli pasek jest pomarańczowy, za bardzo się uśmiechasz lub marszczysz brwi.";
+"neutral.continue" = "Świetnie, dalej";
+
+"calib.step.current" = "Bieżąca wartość";
+"calib.step.peak" = "Szczyt: %.2f";
+"calib.step.target" = "Cel: %.2f";
+"calib.step.skip" = "Pomiń";
+"calib.step.retry" = "Powtórz";
+"calib.step.accept" = "Akceptuj";
+"calib.checkpoint.title" = "Przerwa";
+"calib.checkpoint.msg" = "Zrobiłeś %d AU. Chwila odpoczynku?";
+"calib.checkpoint.continue" = "Dalej";
+
+"perf.title" = "Nagrywanie mimiki";
+"perf.name.placeholder" = "Nazwa klipu";
+"perf.elapsed" = "Czas: %.1f s";
+"perf.frames" = "Klatki: %d";
+"perf.clips" = "Nagrania";
+"perf.frames.count" = "klatek: %d";
+"perf.continue" = "Kontynuuj";
+
+"preview.title" = "Podgląd i eksport";
+"preview.preset" = "Preset emocji";
+"preset.neutral" = "Neutralna";
+"preset.happy" = "Radość";
+"preset.sad" = "Smutek";
+"preset.angry" = "Złość";
+"preset.surprised" = "Zdziwienie";
+"preview.play" = "Odtwórz klip";
+"preview.play.none" = "— brak —";
+"preview.export.cta" = "Eksportuj";
+
+"export.title" = "Eksport profilu";
+"export.section.profile" = "Profil";
+"export.profile.name" = "Nazwa profilu";
+"export.use.lidar" = "Użyj danych LiDAR";
+"export.section.summary" = "Podsumowanie";
+"export.sum.vertices" = "Wierzchołki";
+"export.sum.triangles" = "Trójkąty";
+"export.sum.au" = "Zaakceptowane AU";
+"export.sum.clips" = "Klipy performance";
+"export.sum.size" = "Szacowany rozmiar";
+"export.cta" = "Zapisz plik .face";
+"export.loading" = "Zapisywanie pliku .face v3…";
+
+"transfer.title" = "Transfer";
+"transfer.method" = "Metoda";
+"transfer.airdrop" = "AirDrop";
+"transfer.files" = "Pliki";
+"transfer.wifi" = "Wi-Fi";
+"transfer.send" = "Wyślij";
+"transfer.finish" = "Zakończ";
+"transfer.nofile" = "Brak pliku do wysłania.";
+"transfer.error.title" = "Błąd transferu";
+"transfer.status.idle" = "Oczekiwanie";
+"transfer.status.preparing" = "Przygotowywanie…";
+"transfer.status.transferring" = "Wysyłanie…";
+"transfer.status.finished" = "Gotowe!";

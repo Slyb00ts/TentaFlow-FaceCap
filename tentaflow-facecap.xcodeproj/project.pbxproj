@@ -1,0 +1,559 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A0010001000000000000A001 /* TentaflowFacecapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0020001000000000000A001 /* TentaflowFacecapApp.swift */; };
+		A0010002000000000000A001 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0020002000000000000A001 /* AppRouter.swift */; };
+		A0010003000000000000A001 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0020003000000000000A001 /* AppEnvironment.swift */; };
+		A0010004000000000000A001 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0020004000000000000A001 /* OnboardingView.swift */; };
+		A0010005000000000000A001 /* HeadScanBriefView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0020005000000000000A001 /* HeadScanBriefView.swift */; };
+		A0010006000000000000A001 /* HeadScanCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0020006000000000000A001 /* HeadScanCaptureView.swift */; };
+		A0010007000000000000A001 /* HeadScanPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0020007000000000000A001 /* HeadScanPreviewView.swift */; };
+		A0010008000000000000A001 /* CalibrationBriefView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0020008000000000000A001 /* CalibrationBriefView.swift */; };
+		A0010009000000000000A001 /* NeutralFaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0020009000000000000A001 /* NeutralFaceView.swift */; };
+		A001000A000000000000A001 /* CalibrationStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A002000A000000000000A001 /* CalibrationStepView.swift */; };
+		A001000B000000000000A001 /* PerformanceCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A002000B000000000000A001 /* PerformanceCaptureView.swift */; };
+		A001000C000000000000A001 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A002000C000000000000A001 /* PreviewView.swift */; };
+		A001000D000000000000A001 /* ExportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A002000D000000000000A001 /* ExportView.swift */; };
+		A001000E000000000000A001 /* TransferProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A002000E000000000000A001 /* TransferProgressView.swift */; };
+		A001000F000000000000A001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A002000F000000000000A001 /* Assets.xcassets */; };
+		A0010010000000000000A001 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A0020010000000000000A001 /* Localizable.strings */; };
+		A0010011000000000000A001 /* ARKitBlendshapeGuide.json in Resources */ = {isa = PBXBuildFile; fileRef = A0020011000000000000A001 /* ARKitBlendshapeGuide.json */; };
+		A0010012000000000000A001 /* Shared in Frameworks */ = {isa = PBXBuildFile; productRef = A0030001000000000000A001 /* Shared */; };
+		A0010013000000000000A001 /* Export in Frameworks */ = {isa = PBXBuildFile; productRef = A0030002000000000000A001 /* Export */; };
+		A0010014000000000000A001 /* Transfer in Frameworks */ = {isa = PBXBuildFile; productRef = A0030003000000000000A001 /* Transfer */; };
+		A0010015000000000000A001 /* HeadScan in Frameworks */ = {isa = PBXBuildFile; productRef = A0030004000000000000A001 /* HeadScan */; };
+		A0010016000000000000A001 /* FaceCalibration in Frameworks */ = {isa = PBXBuildFile; productRef = A0030005000000000000A001 /* FaceCalibration */; };
+		A0010017000000000000A001 /* AssetInjection in Frameworks */ = {isa = PBXBuildFile; productRef = A0030006000000000000A001 /* AssetInjection */; };
+		A0010018000000000000A001 /* PerformanceCapture in Frameworks */ = {isa = PBXBuildFile; productRef = A0030007000000000000A001 /* PerformanceCapture */; };
+		A0010019000000000000A001 /* Preview in Frameworks */ = {isa = PBXBuildFile; productRef = A0030008000000000000A001 /* Preview */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A0020001000000000000A001 /* TentaflowFacecapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TentaflowFacecapApp.swift; sourceTree = "<group>"; };
+		A0020002000000000000A001 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		A0020003000000000000A001 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		A0020004000000000000A001 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		A0020005000000000000A001 /* HeadScanBriefView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadScanBriefView.swift; sourceTree = "<group>"; };
+		A0020006000000000000A001 /* HeadScanCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadScanCaptureView.swift; sourceTree = "<group>"; };
+		A0020007000000000000A001 /* HeadScanPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadScanPreviewView.swift; sourceTree = "<group>"; };
+		A0020008000000000000A001 /* CalibrationBriefView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalibrationBriefView.swift; sourceTree = "<group>"; };
+		A0020009000000000000A001 /* NeutralFaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeutralFaceView.swift; sourceTree = "<group>"; };
+		A002000A000000000000A001 /* CalibrationStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalibrationStepView.swift; sourceTree = "<group>"; };
+		A002000B000000000000A001 /* PerformanceCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceCaptureView.swift; sourceTree = "<group>"; };
+		A002000C000000000000A001 /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
+		A002000D000000000000A001 /* ExportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportView.swift; sourceTree = "<group>"; };
+		A002000E000000000000A001 /* TransferProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferProgressView.swift; sourceTree = "<group>"; };
+		A002000F000000000000A001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A0020010000000000000A001 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		A0020011000000000000A001 /* ARKitBlendshapeGuide.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ARKitBlendshapeGuide.json; sourceTree = "<group>"; };
+		A0020012000000000000A001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0020013000000000000A001 /* tentaflow-facecap.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "tentaflow-facecap.entitlements"; sourceTree = "<group>"; };
+		A0020014000000000000A001 /* tentaflow-facecap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tentaflow-facecap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0040001000000000000A001 /* Shared */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Shared; path = Packages/Shared; sourceTree = "<group>"; };
+		A0040002000000000000A001 /* Export */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Export; path = Packages/Export; sourceTree = "<group>"; };
+		A0040003000000000000A001 /* Transfer */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Transfer; path = Packages/Transfer; sourceTree = "<group>"; };
+		A0040004000000000000A001 /* HeadScan */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = HeadScan; path = Packages/HeadScan; sourceTree = "<group>"; };
+		A0040005000000000000A001 /* FaceCalibration */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FaceCalibration; path = Packages/FaceCalibration; sourceTree = "<group>"; };
+		A0040006000000000000A001 /* AssetInjection */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = AssetInjection; path = Packages/AssetInjection; sourceTree = "<group>"; };
+		A0040007000000000000A001 /* PerformanceCapture */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = PerformanceCapture; path = Packages/PerformanceCapture; sourceTree = "<group>"; };
+		A0040008000000000000A001 /* Preview */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Preview; path = Packages/Preview; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A0050001000000000000A001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0010012000000000000A001 /* Shared in Frameworks */,
+				A0010013000000000000A001 /* Export in Frameworks */,
+				A0010014000000000000A001 /* Transfer in Frameworks */,
+				A0010015000000000000A001 /* HeadScan in Frameworks */,
+				A0010016000000000000A001 /* FaceCalibration in Frameworks */,
+				A0010017000000000000A001 /* AssetInjection in Frameworks */,
+				A0010018000000000000A001 /* PerformanceCapture in Frameworks */,
+				A0010019000000000000A001 /* Preview in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A0060001000000000000A001 = {
+			isa = PBXGroup;
+			children = (
+				A0060002000000000000A001 /* tentaflow-facecap */,
+				A0060007000000000000A001 /* Packages */,
+				A0060008000000000000A001 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A0060002000000000000A001 /* tentaflow-facecap */ = {
+			isa = PBXGroup;
+			children = (
+				A0060003000000000000A001 /* App */,
+				A0060004000000000000A001 /* Views */,
+				A0060005000000000000A001 /* Resources */,
+				A0020012000000000000A001 /* Info.plist */,
+				A0020013000000000000A001 /* tentaflow-facecap.entitlements */,
+			);
+			path = "tentaflow-facecap";
+			sourceTree = "<group>";
+		};
+		A0060003000000000000A001 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A0020001000000000000A001 /* TentaflowFacecapApp.swift */,
+				A0020002000000000000A001 /* AppRouter.swift */,
+				A0020003000000000000A001 /* AppEnvironment.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A0060004000000000000A001 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A0020004000000000000A001 /* OnboardingView.swift */,
+				A0020005000000000000A001 /* HeadScanBriefView.swift */,
+				A0020006000000000000A001 /* HeadScanCaptureView.swift */,
+				A0020007000000000000A001 /* HeadScanPreviewView.swift */,
+				A0020008000000000000A001 /* CalibrationBriefView.swift */,
+				A0020009000000000000A001 /* NeutralFaceView.swift */,
+				A002000A000000000000A001 /* CalibrationStepView.swift */,
+				A002000B000000000000A001 /* PerformanceCaptureView.swift */,
+				A002000C000000000000A001 /* PreviewView.swift */,
+				A002000D000000000000A001 /* ExportView.swift */,
+				A002000E000000000000A001 /* TransferProgressView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A0060005000000000000A001 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A002000F000000000000A001 /* Assets.xcassets */,
+				A0020010000000000000A001 /* Localizable.strings */,
+				A0020011000000000000A001 /* ARKitBlendshapeGuide.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A0060007000000000000A001 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				A0040001000000000000A001 /* Shared */,
+				A0040002000000000000A001 /* Export */,
+				A0040003000000000000A001 /* Transfer */,
+				A0040004000000000000A001 /* HeadScan */,
+				A0040005000000000000A001 /* FaceCalibration */,
+				A0040006000000000000A001 /* AssetInjection */,
+				A0040007000000000000A001 /* PerformanceCapture */,
+				A0040008000000000000A001 /* Preview */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		A0060008000000000000A001 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A0020014000000000000A001 /* tentaflow-facecap.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A0070001000000000000A001 /* tentaflow-facecap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0080001000000000000A001 /* Build configuration list for PBXNativeTarget "tentaflow-facecap" */;
+			buildPhases = (
+				A0090001000000000000A001 /* Sources */,
+				A0050001000000000000A001 /* Frameworks */,
+				A00A0001000000000000A001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "tentaflow-facecap";
+			packageProductDependencies = (
+				A0030001000000000000A001 /* Shared */,
+				A0030002000000000000A001 /* Export */,
+				A0030003000000000000A001 /* Transfer */,
+				A0030004000000000000A001 /* HeadScan */,
+				A0030005000000000000A001 /* FaceCalibration */,
+				A0030006000000000000A001 /* AssetInjection */,
+				A0030007000000000000A001 /* PerformanceCapture */,
+				A0030008000000000000A001 /* Preview */,
+			);
+			productName = "tentaflow-facecap";
+			productReference = A0020014000000000000A001 /* tentaflow-facecap.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A00B0001000000000000A001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					A0070001000000000000A001 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = A0080002000000000000A001 /* Build configuration list for PBXProject "tentaflow-facecap" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = pl;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				pl,
+				en,
+				Base,
+			);
+			mainGroup = A0060001000000000000A001;
+			packageReferences = (
+				A00C0001000000000000A001 /* XCLocalSwiftPackageReference "Packages/Shared" */,
+				A00C0002000000000000A001 /* XCLocalSwiftPackageReference "Packages/Export" */,
+				A00C0003000000000000A001 /* XCLocalSwiftPackageReference "Packages/Transfer" */,
+				A00C0004000000000000A001 /* XCLocalSwiftPackageReference "Packages/HeadScan" */,
+				A00C0005000000000000A001 /* XCLocalSwiftPackageReference "Packages/FaceCalibration" */,
+				A00C0006000000000000A001 /* XCLocalSwiftPackageReference "Packages/AssetInjection" */,
+				A00C0007000000000000A001 /* XCLocalSwiftPackageReference "Packages/PerformanceCapture" */,
+				A00C0008000000000000A001 /* XCLocalSwiftPackageReference "Packages/Preview" */,
+			);
+			productRefGroup = A0060008000000000000A001 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A0070001000000000000A001 /* tentaflow-facecap */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A00A0001000000000000A001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A001000F000000000000A001 /* Assets.xcassets in Resources */,
+				A0010010000000000000A001 /* Localizable.strings in Resources */,
+				A0010011000000000000A001 /* ARKitBlendshapeGuide.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A0090001000000000000A001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0010001000000000000A001 /* TentaflowFacecapApp.swift in Sources */,
+				A0010002000000000000A001 /* AppRouter.swift in Sources */,
+				A0010003000000000000A001 /* AppEnvironment.swift in Sources */,
+				A0010004000000000000A001 /* OnboardingView.swift in Sources */,
+				A0010005000000000000A001 /* HeadScanBriefView.swift in Sources */,
+				A0010006000000000000A001 /* HeadScanCaptureView.swift in Sources */,
+				A0010007000000000000A001 /* HeadScanPreviewView.swift in Sources */,
+				A0010008000000000000A001 /* CalibrationBriefView.swift in Sources */,
+				A0010009000000000000A001 /* NeutralFaceView.swift in Sources */,
+				A001000A000000000000A001 /* CalibrationStepView.swift in Sources */,
+				A001000B000000000000A001 /* PerformanceCaptureView.swift in Sources */,
+				A001000C000000000000A001 /* PreviewView.swift in Sources */,
+				A001000D000000000000A001 /* ExportView.swift in Sources */,
+				A001000E000000000000A001 /* TransferProgressView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A00D0001000000000000A001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = targeted;
+				SWIFT_VERSION = 5.10;
+			};
+			name = Debug;
+		};
+		A00D0002000000000000A001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_STRICT_CONCURRENCY = targeted;
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
+				SWIFT_VERSION = 5.10;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A00D0003000000000000A001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "tentaflow-facecap/tentaflow-facecap.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "tentaflow-facecap/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.tentaflow.facecap";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.10;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		A00D0004000000000000A001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "tentaflow-facecap/tentaflow-facecap.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "tentaflow-facecap/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.tentaflow.facecap";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.10;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A0080001000000000000A001 /* Build configuration list for PBXNativeTarget "tentaflow-facecap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A00D0003000000000000A001 /* Debug */,
+				A00D0004000000000000A001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0080002000000000000A001 /* Build configuration list for PBXProject "tentaflow-facecap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A00D0001000000000000A001 /* Debug */,
+				A00D0002000000000000A001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		A00C0001000000000000A001 /* XCLocalSwiftPackageReference "Packages/Shared" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "Packages/Shared";
+		};
+		A00C0002000000000000A001 /* XCLocalSwiftPackageReference "Packages/Export" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "Packages/Export";
+		};
+		A00C0003000000000000A001 /* XCLocalSwiftPackageReference "Packages/Transfer" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "Packages/Transfer";
+		};
+		A00C0004000000000000A001 /* XCLocalSwiftPackageReference "Packages/HeadScan" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "Packages/HeadScan";
+		};
+		A00C0005000000000000A001 /* XCLocalSwiftPackageReference "Packages/FaceCalibration" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "Packages/FaceCalibration";
+		};
+		A00C0006000000000000A001 /* XCLocalSwiftPackageReference "Packages/AssetInjection" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "Packages/AssetInjection";
+		};
+		A00C0007000000000000A001 /* XCLocalSwiftPackageReference "Packages/PerformanceCapture" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "Packages/PerformanceCapture";
+		};
+		A00C0008000000000000A001 /* XCLocalSwiftPackageReference "Packages/Preview" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "Packages/Preview";
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A0030001000000000000A001 /* Shared */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Shared;
+		};
+		A0030002000000000000A001 /* Export */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Export;
+		};
+		A0030003000000000000A001 /* Transfer */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Transfer;
+		};
+		A0030004000000000000A001 /* HeadScan */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HeadScan;
+		};
+		A0030005000000000000A001 /* FaceCalibration */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FaceCalibration;
+		};
+		A0030006000000000000A001 /* AssetInjection */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AssetInjection;
+		};
+		A0030007000000000000A001 /* PerformanceCapture */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PerformanceCapture;
+		};
+		A0030008000000000000A001 /* Preview */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Preview;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A00B0001000000000000A001 /* Project object */;
+}

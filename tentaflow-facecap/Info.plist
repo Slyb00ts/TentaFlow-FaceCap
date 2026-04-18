@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>pl</string>
+	<key>CFBundleDisplayName</key>
+	<string>TentaFlow FaceCap</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Aplikacja używa kamery do skanu głowy w 3D oraz śledzenia 52 blendshapes ARKit w czasie rzeczywistym.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Aplikacja nagrywa dźwięk razem z mimiką, aby zsynchronizować mowę z animacją twarzy na urządzeniu Tab5.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Zapis gotowych klatek i tekstur głowy do biblioteki zdjęć użytkownika.</string>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>Aplikacja łączy się z urządzeniem Rack-Eye w sieci lokalnej (Bonjour), aby przesłać profil twarzy.</string>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_rackeye._tcp.</string>
+	</array>
+	<key>UIApplicationSceneManifest</key>
+	<dict>
+		<key>UIApplicationSupportsMultipleScenes</key>
+		<false/>
+	</dict>
+	<key>UIBackgroundModes</key>
+	<array/>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>arm64</string>
+		<string>front-facing-camera</string>
+		<string>iphone-ipad-minimum-performance-a12</string>
+		<string>truedepth-camera</string>
+	</array>
+	<key>UIRequiresFullScreen</key>
+	<true/>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleLightContent</string>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.data</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>TentaFlow Face Profile</string>
+			<key>UTTypeIdentifier</key>
+			<string>com.rackeye.face</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>face</string>
+				</array>
+				<key>public.mime-type</key>
+				<array>
+					<string>application/x-rackeye-face</string>
+				</array>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
